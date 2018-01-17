@@ -1,0 +1,43 @@
+//- DEBUG=fuji-climb:* PORT=8000 npm start
+
+//- extends layout
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title 富士登山 混雑予想サイト
+    //- script(src="../public/javascripts/jquery.ui.core.min")
+    //- script(src="../public/javascripts/jquery.ui.datepicker.min")
+    //- script(src="../public/javascripts/jquery.ui.datepicker-ja.min")
+    //- script(src="../public/javascripts/jquery-1.11.0.min")
+    //- link(rel="stylesheet" href="../public/css/style.css")
+    //- script.
+    //-   $(function() {
+    //-     $('#date').datepicker({
+    //-       dateFormat:'yy-mm-dd',
+    //-     });
+    //-   });
+
+    
+  body
+    h1 混雑状況をチェックして日本一の山を目指そう！ 
+    
+    form(action="" method="post")
+      input(type="date" name="date" min="2018-07-01" max="2018-09-10")
+      input(type="submit" name="confirm" value="確認")
+    
+
+
+    
+//- // 表示エリア
+//-   カレンダーから日付け選択
+
+//-   7月 8月 9月(10日まで) 横並び
+//-   日付けを選ぶ
+
+//- ◯月✕週目△曜日かを取得
+
+//-   ルート別予想登山者数表示
+
+//-     h1 #{****} 
