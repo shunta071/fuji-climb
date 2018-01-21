@@ -1,13 +1,17 @@
+'use strict';
+const jade = require('jade');
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
-router.get('/', function(req, res, next) {
-  res.render('index', { year: '2017年' });
+/* POST */
+router.post('/', function(req, res, next) {
+  res.render('result');
 });
+
 
 module.exports = router;

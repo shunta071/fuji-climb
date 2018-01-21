@@ -7,29 +7,35 @@ html(lang="ja")
   head
     meta(charset="UTF-8")
     title 富士登山 混雑予想サイト
-    //- script(src="../public/javascripts/jquery.ui.core.min")
-    //- script(src="../public/javascripts/jquery.ui.datepicker.min")
-    //- script(src="../public/javascripts/jquery.ui.datepicker-ja.min")
-    //- script(src="../public/javascripts/jquery-1.11.0.min")
-    //- link(rel="stylesheet" href="../public/css/style.css")
-    //- script.
-    //-   $(function() {
-    //-     $('#date').datepicker({
-    //-       dateFormat:'yy-mm-dd',
-    //-     });
-    //-   });
+    link(rel="stylesheet",
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7",
+      crossorigin="anonymous")
+    link(rel="stylesheet",
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css",
+      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r",
+      crossorigin="anonymous")
+
 
     
   body
     h1 混雑状況をチェックして日本一の山を目指そう！ 
-    
-    form(action="" method="post")
-      input(type="date" name="date" min="2018-07-01" max="2018-09-10")
-      input(type="submit" name="confirm" value="確認")
-    
+
+    form(action="/result" method="post")
+      div
+        input(type="date" name="date" min="2018-07-01" max="2018-09-10")
+      div
+        button(type="submit" class="btn btn-primary float-right") 確認
+    p ※登山日は開山期間(7月1日～9月10日)から選択してください    
 
 
     
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS",
+    crossorigin="anonymous")
+
+    
+
 //- // 表示エリア
 //-   カレンダーから日付け選択
 
